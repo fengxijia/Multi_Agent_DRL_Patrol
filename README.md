@@ -11,6 +11,7 @@ The current RL algorithm implemented is Proximal Policy Optimization (PPO).
 
 ## Installation
 
+<!--
 ### Prerequisites
 
 Dependencies you need to install.
@@ -24,6 +25,7 @@ numpy==1.20.3
 scikit_learn==1.1.1
 torch==1.11.0
 ```
+-->
 
 ### Installing
 

@@ -27,7 +27,6 @@ torch==1.11.0
 ```
 -->
 
-### Installing
 
 There are two ways to install virtual environments. One is from yml file, the other is from requirements.txt.
 

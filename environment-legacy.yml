@@ -1,0 +1,21 @@
+# Legacy conda environment (older library versions, kept for reproducibility).
+# Prefer environment.yml on new machines. Python is 3.9 -- the minimum this code
+# supports (it uses argparse.BooleanOptionalAction, added in 3.9).
+#   conda env create -n marl_patrol_legacy -f environment-legacy.yml
+#
+# Replaces the original patrol.yml, which had unresolved git merge conflicts.
+name: marl_patrol_legacy
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pip
+  - pip:
+      - gym==0.23.1
+      - imageio==2.9.0
+      - matplotlib==3.4.3
+      - networkx==2.6.3
+      - numpy==1.21.5
+      - scikit-learn==1.1.1
+      - torch==1.11.0
+      - tensorboard==2.9.1

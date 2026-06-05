@@ -1,1 +1,0 @@
-from gym_patrol.envs.MAPatrol import MAPatrolEnv

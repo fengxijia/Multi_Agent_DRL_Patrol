@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+
+# Training / evaluation outputs (checkpoints, tensorboard logs, generated GIFs)
+results/
+
+# Editor / OS / local agent settings
+.DS_Store
+.vscode/
+.idea/
+.claude/
+
+# Virtual envs
+.venv/
+venv/
+env/

@@ -9,10 +9,10 @@ scalable to different numbers of agents and targets.
 
 <p align="center">
   <img src="docs/assets/demo.gif" width="380" alt="patrolling demo (4 agents, 20 targets)">
-  <img src="docs/assets/demo_onnode_400ep.gif" width="380" alt="on-node demo reproduced from this code (4 agents, 10 targets, 400 episodes)">
+  <img src="docs/assets/demo_onnode.gif" width="380" alt="on-node demo trained with this code (4 agents, 10 targets, 3000 episodes)">
 </p>
-<p align="center"><sub>Left: original trained demo. Right: reproduced from this package
-(<code>on_node</code>, 4 agents / 10 targets, 400 training episodes) — see
+<p align="center"><sub>Left: original trained demo. Right: trained with this package
+(<code>on_node</code>, 4 agents / 10 targets, 3000 training episodes) — see
 <a href="#reproduce-this-demo">Reproduce this demo</a>.</sub></p>
 
 > **What's new (v0.2).** The three near-duplicate project folders
@@ -130,12 +130,11 @@ marl-patrol --mode on_node --fixed-map
 
 ### Reproduce this demo
 
-The right-hand GIF above was produced end-to-end from this package (CPU, a few
-minutes) with:
+The right-hand GIF above was produced end-to-end from this package (CPU) with:
 
 ```bash
-marl-patrol --mode on_node --num-episodes 400 --seed 0 --suffix demo
-marl-patrol --mode on_node --test --render --num-tests 1 --suffix demo
+marl-patrol --mode on_node --num-episodes 3000 --seed 0 --suffix v2
+marl-patrol --mode on_node --test --render --num-tests 1 --suffix v2
 # -> results/test/<folder>/agents4-targets10-comms_radiusinf-test0.gif
 ```
 

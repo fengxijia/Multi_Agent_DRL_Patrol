@@ -8,8 +8,12 @@ Policy Optimization (PPO)**. The Transformer-based policy ("PatrolNet") is
 scalable to different numbers of agents and targets.
 
 <p align="center">
-  <img src="docs/assets/demo.gif" width="420" alt="patrolling demo (4 agents, 20 targets)">
+  <img src="docs/assets/demo.gif" width="380" alt="patrolling demo (4 agents, 20 targets)">
+  <img src="docs/assets/demo_onnode_400ep.gif" width="380" alt="on-node demo reproduced from this code (4 agents, 10 targets, 400 episodes)">
 </p>
+<p align="center"><sub>Left: original trained demo. Right: reproduced from this package
+(<code>on_node</code>, 4 agents / 10 targets, 400 training episodes) — see
+<a href="#reproduce-this-demo">Reproduce this demo</a>.</sub></p>
 
 > **What's new (v0.2).** The three near-duplicate project folders
 > (`OnNode_v2`, `OnNode_FixedMap`, `EveryTimeStep`) have been merged into a single
@@ -123,6 +127,19 @@ marl-patrol --mode on_node --test --render --suffix v2
 ```bash
 marl-patrol --mode on_node --fixed-map
 ```
+
+### Reproduce this demo
+
+The right-hand GIF above was produced end-to-end from this package (CPU, a few
+minutes) with:
+
+```bash
+marl-patrol --mode on_node --num-episodes 400 --seed 0 --suffix demo
+marl-patrol --mode on_node --test --render --num-tests 1 --suffix demo
+# -> results/test/<folder>/agents4-targets10-comms_radiusinf-test0.gif
+```
+
+(using a config with 4 agents, 10 targets and `max_episode_steps = 100`).
 
 ### CLI options
 

@@ -1,0 +1,14 @@
+# Legacy stack -- the exact versions the project was originally developed with
+# (Python 3.7/3.8, CUDA 11.x). Kept for reproducibility; prefer requirements.txt
+# on new machines. The code's gym/gymnasium shim makes it run on either stack.
+#
+# This replaces the original pip-freeze dump that had unresolved git merge
+# conflicts; only the direct dependencies are pinned here.
+gym==0.23.1
+imageio==2.9.0
+matplotlib==3.4.3
+networkx==2.6.3
+numpy==1.21.5
+scikit-learn==1.1.1
+torch==1.11.0
+tensorboard==2.9.1
